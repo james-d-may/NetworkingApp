@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5041282197D834C0091F02B /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5041281197D834C0091F02B /* HomeTableViewController.m */; };
+		A5041285197D83680091F02B /* MyNetworksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5041284197D83680091F02B /* MyNetworksTableViewController.m */; };
+		A5041288197D83950091F02B /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5041287197D83950091F02B /* ProfileViewController.m */; };
+		A504128E198150670091F02B /* NetworkCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A504128D198150670091F02B /* NetworkCreateViewController.m */; };
+		A5041291198153050091F02B /* AttendeeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5041290198153050091F02B /* AttendeeDetailViewController.m */; };
+		A5041294198159A10091F02B /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5041293198159A10091F02B /* QRCodeReaderViewController.m */; };
+		A504129719815F720091F02B /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A504129619815F720091F02B /* LogInViewController.m */; };
 		A5D6043819753A77009C6753 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6043719753A77009C6753 /* Foundation.framework */; };
 		A5D6043A19753A77009C6753 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6043919753A77009C6753 /* CoreGraphics.framework */; };
 		A5D6043C19753A77009C6753 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6043B19753A77009C6753 /* UIKit.framework */; };
@@ -14,8 +21,6 @@
 		A5D6044419753A77009C6753 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D6044319753A77009C6753 /* main.m */; };
 		A5D6044819753A77009C6753 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D6044719753A77009C6753 /* AppDelegate.m */; };
 		A5D6044B19753A77009C6753 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5D6044919753A77009C6753 /* Main.storyboard */; };
-		A5D6044E19753A77009C6753 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D6044D19753A77009C6753 /* FirstViewController.m */; };
-		A5D6045119753A77009C6753 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D6045019753A77009C6753 /* SecondViewController.m */; };
 		A5D6045319753A78009C6753 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D6045219753A78009C6753 /* Images.xcassets */; };
 		A5D6045A19753A78009C6753 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6045919753A78009C6753 /* XCTest.framework */; };
 		A5D6045B19753A78009C6753 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6043719753A77009C6753 /* Foundation.framework */; };
@@ -35,6 +40,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5041280197D834C0091F02B /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeTableViewController.h; path = ../HomeTableViewController.h; sourceTree = "<group>"; };
+		A5041281197D834C0091F02B /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTableViewController.m; path = ../HomeTableViewController.m; sourceTree = "<group>"; };
+		A5041283197D83680091F02B /* MyNetworksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyNetworksTableViewController.h; path = ../MyNetworksTableViewController.h; sourceTree = "<group>"; };
+		A5041284197D83680091F02B /* MyNetworksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyNetworksTableViewController.m; path = ../MyNetworksTableViewController.m; sourceTree = "<group>"; };
+		A5041286197D83950091F02B /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ../ProfileViewController.h; sourceTree = "<group>"; };
+		A5041287197D83950091F02B /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ../ProfileViewController.m; sourceTree = "<group>"; };
+		A504128C198150670091F02B /* NetworkCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkCreateViewController.h; path = ../NetworkCreateViewController.h; sourceTree = "<group>"; };
+		A504128D198150670091F02B /* NetworkCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkCreateViewController.m; path = ../NetworkCreateViewController.m; sourceTree = "<group>"; };
+		A504128F198153050091F02B /* AttendeeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendeeDetailViewController.h; sourceTree = SOURCE_ROOT; };
+		A5041290198153050091F02B /* AttendeeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendeeDetailViewController.m; sourceTree = SOURCE_ROOT; };
+		A5041292198159A10091F02B /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderViewController.h; sourceTree = SOURCE_ROOT; };
+		A5041293198159A10091F02B /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderViewController.m; sourceTree = SOURCE_ROOT; };
+		A504129519815F720091F02B /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = SOURCE_ROOT; };
+		A504129619815F720091F02B /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = SOURCE_ROOT; };
 		A5D6043419753A77009C6753 /* NetworkingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D6043719753A77009C6753 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A5D6043919753A77009C6753 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -46,10 +65,6 @@
 		A5D6044619753A77009C6753 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A5D6044719753A77009C6753 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A5D6044A19753A77009C6753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A5D6044C19753A77009C6753 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		A5D6044D19753A77009C6753 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		A5D6044F19753A77009C6753 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		A5D6045019753A77009C6753 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		A5D6045219753A78009C6753 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A5D6045819753A78009C6753 /* NetworkingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D6045919753A78009C6753 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -117,11 +132,21 @@
 			children = (
 				A5D6044619753A77009C6753 /* AppDelegate.h */,
 				A5D6044719753A77009C6753 /* AppDelegate.m */,
+				A5041286197D83950091F02B /* ProfileViewController.h */,
+				A5041287197D83950091F02B /* ProfileViewController.m */,
+				A504128C198150670091F02B /* NetworkCreateViewController.h */,
+				A504128D198150670091F02B /* NetworkCreateViewController.m */,
+				A5041283197D83680091F02B /* MyNetworksTableViewController.h */,
+				A5041284197D83680091F02B /* MyNetworksTableViewController.m */,
+				A5041280197D834C0091F02B /* HomeTableViewController.h */,
+				A5041281197D834C0091F02B /* HomeTableViewController.m */,
 				A5D6044919753A77009C6753 /* Main.storyboard */,
-				A5D6044C19753A77009C6753 /* FirstViewController.h */,
-				A5D6044D19753A77009C6753 /* FirstViewController.m */,
-				A5D6044F19753A77009C6753 /* SecondViewController.h */,
-				A5D6045019753A77009C6753 /* SecondViewController.m */,
+				A504129519815F720091F02B /* LogInViewController.h */,
+				A504129619815F720091F02B /* LogInViewController.m */,
+				A5041292198159A10091F02B /* QRCodeReaderViewController.h */,
+				A5041293198159A10091F02B /* QRCodeReaderViewController.m */,
+				A504128F198153050091F02B /* AttendeeDetailViewController.h */,
+				A5041290198153050091F02B /* AttendeeDetailViewController.m */,
 				A5D6045219753A78009C6753 /* Images.xcassets */,
 				A5D6043E19753A77009C6753 /* Supporting Files */,
 			);
@@ -254,10 +279,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5D6045119753A77009C6753 /* SecondViewController.m in Sources */,
+				A5041285197D83680091F02B /* MyNetworksTableViewController.m in Sources */,
 				A5D6044819753A77009C6753 /* AppDelegate.m in Sources */,
-				A5D6044E19753A77009C6753 /* FirstViewController.m in Sources */,
+				A5041282197D834C0091F02B /* HomeTableViewController.m in Sources */,
 				A5D6044419753A77009C6753 /* main.m in Sources */,
+				A5041288197D83950091F02B /* ProfileViewController.m in Sources */,
+				A504129719815F720091F02B /* LogInViewController.m in Sources */,
+				A504128E198150670091F02B /* NetworkCreateViewController.m in Sources */,
+				A5041291198153050091F02B /* AttendeeDetailViewController.m in Sources */,
+				A5041294198159A10091F02B /* QRCodeReaderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +492,7 @@
 				A5D6046B19753A78009C6753 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5D6046C19753A78009C6753 /* Build configuration list for PBXNativeTarget "NetworkingAppTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +501,7 @@
 				A5D6046E19753A78009C6753 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

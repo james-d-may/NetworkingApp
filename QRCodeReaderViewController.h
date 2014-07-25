@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface QRCodeReaderViewController : UIViewController
+@interface QRCodeReaderViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
+
+@property (weak, nonatomic) IBOutlet UIView *viewPreview;
+
+- (IBAction)buttonCancel:(id)sender;
 
 @end

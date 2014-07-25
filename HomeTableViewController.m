@@ -14,14 +14,7 @@
 
 @implementation HomeTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+
 
 - (void)viewDidLoad
 {
@@ -43,6 +36,13 @@
     };
 
     
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController.navigationBar setHidden:NO];
 }
 
 #pragma mark - Table view data source
@@ -120,5 +120,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+# pragma mark - Segue Methods
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showQRCodeScanner"]) {
+        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+    }
+}
 
 @end

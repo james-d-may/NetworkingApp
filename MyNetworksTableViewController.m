@@ -14,15 +14,6 @@
 
 @implementation MyNetworksTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -115,5 +106,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+# pragma mark - Segue Methods
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showCreateNetwork"]) {
+        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+    }
+}
+
 
 @end

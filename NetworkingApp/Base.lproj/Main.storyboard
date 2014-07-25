@@ -166,7 +166,7 @@
                     <navigationItem key="navigationItem" title="My Networks" id="waA-om-bnu">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="ClX-sM-ttV">
                             <connections>
-                                <segue destination="3m5-7m-Dmo" kind="push" id="ja1-VW-lUK"/>
+                                <segue destination="3m5-7m-Dmo" kind="push" identifier="showCreateNetwork" id="ja1-VW-lUK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -197,14 +197,14 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbt-b0-Gav">
-                                <rect key="frame" x="35" y="350" width="42" height="21"/>
+                                <rect key="frame" x="35" y="351" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event/Network name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLX-wY-41x">
-                                <rect key="frame" x="91" y="346" width="194" height="30"/>
+                                <rect key="frame" x="91" y="347" width="194" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -271,7 +271,7 @@
                     <navigationItem key="navigationItem" title="... Attendees" id="wAz-B0-usi">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="EeZ-F5-J5a">
                             <connections>
-                                <segue destination="hsx-v7-se0" kind="push" id="GuU-vC-MCW"/>
+                                <segue destination="hsx-v7-se0" kind="push" identifier="showQRCodeScanner" id="GuU-vC-MCW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -295,9 +295,45 @@
                     <view key="view" contentMode="scaleToFill" id="L1i-FP-XIr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mwP-FN-ELN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="QRCodeOverlay" translatesAutoresizingMaskIntoConstraints="NO" id="80J-af-5dy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan a QRCode to join a network." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="199" translatesAutoresizingMaskIntoConstraints="NO" id="caF-tr-UiX">
+                                <rect key="frame" x="61" y="334" width="199" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POj-iy-fX3">
+                                <rect key="frame" x="133" y="537" width="55" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonCancel:" destination="hsx-v7-se0" eventType="touchUpInside" id="v0W-xx-wCa"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ahy-Sc-4bX"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="viewPreview" destination="mwP-FN-ELN" id="HBI-kI-k1K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Hf-pJ-cJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -694,6 +730,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="QRCodeOverlay" width="640" height="1136"/>
         <image name="black" width="320" height="568"/>
         <image name="first" width="30" height="30"/>
         <image name="setting" width="15" height="15"/>

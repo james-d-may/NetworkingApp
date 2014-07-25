@@ -28,10 +28,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
+
 }
 
 - (IBAction)buttonSettings:(id)sender {

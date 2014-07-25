@@ -34,21 +34,26 @@
     [testObject saveInBackground];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)buttonSettings:(id)sender {
+    
+    // Show action sheet for logging out
+    UIActionSheet *settings = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Log Out", nil];
+    [settings showFromTabBar:self.tabBarController.tabBar];
+    //
+    
 }
 
-/*
-#pragma mark - Navigation
+# pragma mark - ActionSheet Methods
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 0) {
+        
+        [PFUser logOut];
+        [self performSegueWithIdentifier:@"showLogIn" sender:self];
+    }
+    
 }
-*/
+
 
 @end

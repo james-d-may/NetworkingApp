@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface NetworkCreateViewController : UIViewController
+@interface NetworkCreateViewController : UIViewController <UITextFieldDelegate>
+
+- (IBAction)buttonGenerate:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UITextField *textFieldInput;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewQRCode;
+
 
 @end

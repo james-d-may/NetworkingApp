@@ -11,6 +11,7 @@
 @interface SignUpViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (strong,nonatomic) UIImagePickerController *imagePicker;
+@property (strong,nonatomic) UIImage *profilePic;
 
 @property (weak, nonatomic) IBOutlet UITextField *textFieldEmail;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldPassword;

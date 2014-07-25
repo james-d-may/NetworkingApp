@@ -31,11 +31,11 @@
     
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     
-    NSString *email = [self.textFieldEmail.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *username = [self.textFieldEmail.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *password = [self.textFieldPassword.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     // If statment to check valid input and credentials //
-    if ([email length] == 0 || [password length] == 0) {
+    if ([username length] == 0 || [password length] == 0) {
         
         UIAlertView *inputAlertView = [[UIAlertView alloc] initWithTitle:@"Oops" message:@"Make sure you enter an email, and password."  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         
@@ -44,7 +44,7 @@
         
     } else {
         
-        [PFUser logInWithUsernameInBackground:email password:password block:^(PFUser *user, NSError *error) {
+        [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error) {
             if (error) {
                 
                 UIAlertView *newUserAlertView = [[UIAlertView alloc] initWithTitle:@"Sorry" message:[error.userInfo objectForKey:@"error"] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
@@ -58,7 +58,7 @@
                 [currentInstallation setObject:[PFUser currentUser].objectId forKey:@"owner"];
                 [currentInstallation saveInBackground];
                 //
-                [self.navigationController popToRootViewControllerAnimated:YES];
+                [self dismissViewControllerAnimated:YES completion:nil];
                 [[UIApplication sharedApplication] endIgnoringInteractionEvents];
             };
         }];

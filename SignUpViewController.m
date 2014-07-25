@@ -74,6 +74,7 @@
         PFUser *newUser = [PFUser user];
         newUser.username = email;
         newUser.email = email;
+        
         newUser.password = password;
         [newUser setObject:name forKey:@"Name"];
         [newUser setObject:position forKey:@"Position"];
@@ -115,6 +116,38 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
+
+#pragma mark - Image Picker Contoller Delegate
+
+//-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+//    [self dismissViewControllerAnimated:NO completion:nil];
+//    
+//    [self.tabBarController setSelectedIndex:0];
+//}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
+    
+    NSLog(@" %@ ", mediaType);
+    
+    // If photo selected then set as profile pic
+    if ([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
+
+        self.profilePic = [info objectForKey:UIImagePickerControllerOriginalImage];
+        // Set button title to uploaded
+        self.buttonUploadTitle.titleLabel.text = @"Uploaded";
+ 
+    }
+    else {
+
+        
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
 
 # pragma mark - UITextField delegate methods
 

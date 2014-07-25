@@ -14,6 +14,17 @@
 		A5041291198153050091F02B /* AttendeeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5041290198153050091F02B /* AttendeeDetailViewController.m */; };
 		A5041294198159A10091F02B /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5041293198159A10091F02B /* QRCodeReaderViewController.m */; };
 		A504129719815F720091F02B /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A504129619815F720091F02B /* LogInViewController.m */; };
+		A504129B19817DE90091F02B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A504129A19817DE90091F02B /* Parse.framework */; };
+		A504129D19817EA30091F02B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A504129C19817EA30091F02B /* AudioToolbox.framework */; };
+		A504129F19817EAF0091F02B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A504129E19817EAF0091F02B /* CFNetwork.framework */; };
+		A50412A119817EBC0091F02B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50412A019817EBC0091F02B /* CoreLocation.framework */; };
+		A50412A319817EC50091F02B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A50412A219817EC50091F02B /* libz.dylib */; };
+		A50412A519817ECF0091F02B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50412A419817ECF0091F02B /* MobileCoreServices.framework */; };
+		A50412A719817ED60091F02B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50412A619817ED60091F02B /* QuartzCore.framework */; };
+		A50412A919817EDC0091F02B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50412A819817EDC0091F02B /* Security.framework */; };
+		A50412AB19817EE20091F02B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50412AA19817EE20091F02B /* StoreKit.framework */; };
+		A50412AD19817EEF0091F02B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50412AC19817EEF0091F02B /* SystemConfiguration.framework */; };
+		A50412B01981C7E30091F02B /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50412AF1981C7E30091F02B /* SignUpViewController.m */; };
 		A5D6043819753A77009C6753 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6043719753A77009C6753 /* Foundation.framework */; };
 		A5D6043A19753A77009C6753 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6043919753A77009C6753 /* CoreGraphics.framework */; };
 		A5D6043C19753A77009C6753 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6043B19753A77009C6753 /* UIKit.framework */; };
@@ -54,6 +65,18 @@
 		A5041293198159A10091F02B /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderViewController.m; sourceTree = SOURCE_ROOT; };
 		A504129519815F720091F02B /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = SOURCE_ROOT; };
 		A504129619815F720091F02B /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = SOURCE_ROOT; };
+		A504129A19817DE90091F02B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		A504129C19817EA30091F02B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A504129E19817EAF0091F02B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A50412A019817EBC0091F02B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A50412A219817EC50091F02B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A50412A419817ECF0091F02B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A50412A619817ED60091F02B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A50412A819817EDC0091F02B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A50412AA19817EE20091F02B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A50412AC19817EEF0091F02B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A50412AE1981C7E30091F02B /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = SOURCE_ROOT; };
+		A50412AF1981C7E30091F02B /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = SOURCE_ROOT; };
 		A5D6043419753A77009C6753 /* NetworkingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D6043719753A77009C6753 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A5D6043919753A77009C6753 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -78,8 +101,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A50412AD19817EEF0091F02B /* SystemConfiguration.framework in Frameworks */,
+				A50412AB19817EE20091F02B /* StoreKit.framework in Frameworks */,
+				A50412A919817EDC0091F02B /* Security.framework in Frameworks */,
+				A50412A719817ED60091F02B /* QuartzCore.framework in Frameworks */,
+				A50412A519817ECF0091F02B /* MobileCoreServices.framework in Frameworks */,
+				A50412A319817EC50091F02B /* libz.dylib in Frameworks */,
+				A50412A119817EBC0091F02B /* CoreLocation.framework in Frameworks */,
+				A504129F19817EAF0091F02B /* CFNetwork.framework in Frameworks */,
+				A504129D19817EA30091F02B /* AudioToolbox.framework in Frameworks */,
 				A5D6043A19753A77009C6753 /* CoreGraphics.framework in Frameworks */,
 				A5D6043C19753A77009C6753 /* UIKit.framework in Frameworks */,
+				A504129B19817DE90091F02B /* Parse.framework in Frameworks */,
 				A5D6043819753A77009C6753 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,6 +152,16 @@
 		A5D6043619753A77009C6753 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A50412AC19817EEF0091F02B /* SystemConfiguration.framework */,
+				A50412AA19817EE20091F02B /* StoreKit.framework */,
+				A50412A819817EDC0091F02B /* Security.framework */,
+				A50412A619817ED60091F02B /* QuartzCore.framework */,
+				A50412A419817ECF0091F02B /* MobileCoreServices.framework */,
+				A50412A219817EC50091F02B /* libz.dylib */,
+				A50412A019817EBC0091F02B /* CoreLocation.framework */,
+				A504129E19817EAF0091F02B /* CFNetwork.framework */,
+				A504129C19817EA30091F02B /* AudioToolbox.framework */,
+				A504129A19817DE90091F02B /* Parse.framework */,
 				A5D6043719753A77009C6753 /* Foundation.framework */,
 				A5D6043919753A77009C6753 /* CoreGraphics.framework */,
 				A5D6043B19753A77009C6753 /* UIKit.framework */,
@@ -141,6 +184,8 @@
 				A5041280197D834C0091F02B /* HomeTableViewController.h */,
 				A5041281197D834C0091F02B /* HomeTableViewController.m */,
 				A5D6044919753A77009C6753 /* Main.storyboard */,
+				A50412AE1981C7E30091F02B /* SignUpViewController.h */,
+				A50412AF1981C7E30091F02B /* SignUpViewController.m */,
 				A504129519815F720091F02B /* LogInViewController.h */,
 				A504129619815F720091F02B /* LogInViewController.m */,
 				A5041292198159A10091F02B /* QRCodeReaderViewController.h */,
@@ -285,6 +330,7 @@
 				A5D6044419753A77009C6753 /* main.m in Sources */,
 				A5041288197D83950091F02B /* ProfileViewController.m in Sources */,
 				A504129719815F720091F02B /* LogInViewController.m in Sources */,
+				A50412B01981C7E30091F02B /* SignUpViewController.m in Sources */,
 				A504128E198150670091F02B /* NetworkCreateViewController.m in Sources */,
 				A5041291198153050091F02B /* AttendeeDetailViewController.m in Sources */,
 				A5041294198159A10091F02B /* QRCodeReaderViewController.m in Sources */,
@@ -412,6 +458,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NetworkingApp/NetworkingApp-Prefix.pch";
 				INFOPLIST_FILE = "NetworkingApp/NetworkingApp-Info.plist";
@@ -425,6 +475,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NetworkingApp/NetworkingApp-Prefix.pch";
 				INFOPLIST_FILE = "NetworkingApp/NetworkingApp-Info.plist";

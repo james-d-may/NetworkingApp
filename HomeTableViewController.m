@@ -32,12 +32,17 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+    
+    // Check to see if current user is registered, if not go to log in //
+    self.currentUser = [PFUser currentUser];
+    if (self.currentUser) {
+        NSLog(@"Current user: %@ ", self.currentUser.username);
+        
+    } else {
+        [self performSegueWithIdentifier:@"showLogIn" sender:self];
+    };
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 #pragma mark - Table view data source

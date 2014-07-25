@@ -7,11 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    // Pause Launch Image for a set time //
+    [NSThread sleepForTimeInterval:0.1];
+    
+    // Set up app to connect to backend Parse database //
+    [Parse setApplicationId:@"wnSWeKHcx7Y9obKWx2CVwTIaOZmAkJhVe7UhylY0"
+                  clientKey:@"KeTEl4vg7yfpyNeneWVtTzbJFOVubURBtGCwEa9g"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     // Override point for customization after application launch.
     return YES;
 }

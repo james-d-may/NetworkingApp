@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LogInViewController : UIViewController
+@interface LogInViewController : UIViewController <UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *textFieldEmail;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldPassword;
+
+- (IBAction)logIn:(id)sender;
+- (IBAction)signUp:(id)sender;
 
 @end

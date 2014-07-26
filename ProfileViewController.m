@@ -15,20 +15,29 @@
 
 @implementation ProfileViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    PFUser *current = [PFUser currentUser];
+    self.lblName.text = [current valueForKey:@"Name"];
+    self.lblPosition.text = [current valueForKey:@"Position"];
+    self.lblCompany.text = [current valueForKey:@"Company"];
+    self.lblLocation.text = [current valueForKey:@"Location"];
+    self.lblInterests.text = [current valueForKey:@"Interests"];
+    
+    PFFile *imageFile = [current valueForKey:@"ProfilePic"];
+    NSData *imageData = [imageFile getData];
+    UIImage *pic = [UIImage imageWithData:imageData];
+    
+    self.imageViewProfilePic.image = pic;
 }
 
 - (IBAction)buttonSettings:(id)sender {

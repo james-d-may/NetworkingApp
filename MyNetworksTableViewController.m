@@ -7,6 +7,7 @@
 //
 
 #import "MyNetworksTableViewController.h"
+#import <Parse/Parse.h>
 
 @interface MyNetworksTableViewController ()
 
@@ -25,38 +26,62 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewWillAppear:animated];
+    
+    // Query to find events which user is associated with
+    PFRelation *networkRelation = [[PFUser currentUser] objectForKey:@"JoinedNetworks"];
+    
+    // Query parse to get array of networks
+    PFQuery *query = [networkRelation query];
+    query.limit = 1000;
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error) {
+            NSLog (@"Error %@ %@", error, [error userInfo]);
+        } else {
+            self.joinedNetworks = objects;
+            NSLog(@" %@",self.joinedNetworks);
+            [self.tableView reloadData];
+        }
+    }];
+    
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    // set number of rows to be the count of the array of objects from query
+    return self.joinedNetworks.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    PFObject *network = [self.joinedNetworks objectAtIndex:indexPath.row];
+    
+    // Set cell title to event title
+    cell.textLabel.text = [network valueForKey:@"NetworkName"];
+    //// Set cell subtitle to number of attendees
+
     
     return cell;
 }
-*/
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+ 
+    //// Open a new view controller without tab bar at bottom showing a similar view to home view
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -93,17 +118,6 @@
 {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 */
 

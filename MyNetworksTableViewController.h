@@ -10,4 +10,6 @@
 
 @interface MyNetworksTableViewController : UITableViewController
 
+@property (strong,nonatomic) NSArray *joinedNetworks;
+
 @end

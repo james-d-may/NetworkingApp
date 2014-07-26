@@ -54,6 +54,10 @@
     NSString *location = [self.textFieldLocation.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *interests = [self.textViewInterests.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 
+    // Set up image file to be uploaded
+    NSData *profilePicJPG = UIImageJPEGRepresentation(self.profilePic, 1);
+    NSString *fileName = @"image.jpg";
+    PFFile *profilePicFile = [PFFile fileWithName:fileName data:profilePicJPG];
     
     // If statement to check valid input //
     if ([email length] == 0 || [password length] == 0 || [name length] == 0 || [position length] == 0 || [company length] == 0 || [location length] == 0 || [interests length] == 0) {
@@ -81,6 +85,7 @@
         [newUser setObject:company forKey:@"Company"];
         [newUser setObject:location forKey:@"Location"];
         [newUser setObject:interests forKey:@"Interests"];
+        [newUser setObject:profilePicFile forKey:@"ProfilePic"];
 
         
         [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

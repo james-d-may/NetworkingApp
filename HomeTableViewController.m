@@ -43,34 +43,75 @@
     [super viewWillAppear:animated];
     
     [self.navigationController.navigationBar setHidden:NO];
+    
+    PFRelation *networkRelation = [[PFUser currentUser] objectForKey:@"JoinedNetworks"];
+    
+    // Query parse to get latest network joined
+    PFQuery *query = [networkRelation query];
+    [query orderByDescending:@"createdAt"];
+    query.limit = 1000;
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        if (error) {
+            NSLog (@"Error %@ %@", error, [error userInfo]);
+        } else {
+            self.latestNetwork = object;
+            NSLog(@" %@",self.latestNetwork);
+            
+            // Query parse to get array of users
+            PFRelation *userRelation = [self.latestNetwork objectForKey:@"JoinedUsers"];
+            PFQuery *query2 = [userRelation query];
+            query2.limit = 1000;
+            [query2 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                if (error) {
+                    NSLog (@"Error %@ %@", error, [error userInfo]);
+                } else {
+                    self.joinedUsers = objects;
+                    NSLog(@" %@",self.joinedUsers);
+                    [self.tableView reloadData];
+                }
+                
+            }];
+        }
+    }];
+    
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    // Number of rows is the count of the number of users at event
+    return [self.joinedUsers count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    PFUser *user = [self.joinedUsers objectAtIndex:indexPath.row];
+    
+    // Set cell name to user name
+    cell.textLabel.text = [user valueForKey:@"Name"];
+    // Set cell subtitle to position and company
+    cell.detailTextLabel.text = [NSString stringWithFormat:@" %@ , %@",[user valueForKey:@"Position"],[user valueForKey:@"Company"]];
+    // Set cell pic to user profile pic
+    
+    PFFile *imageFile = [user valueForKey:@"ProfilePic"];
+    NSData *imageData = [imageFile getData];
+    UIImage *pic = [UIImage imageWithData:imageData];
+    
+    cell.imageView.image = pic;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -107,17 +148,6 @@
 {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 */
 

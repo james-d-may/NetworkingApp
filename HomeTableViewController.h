@@ -12,5 +12,7 @@
 @interface HomeTableViewController : UITableViewController
 
 @property (nonatomic,strong) PFUser *currentUser;
+@property (nonatomic,strong) NSArray *joinedUsers;
+@property (strong,nonatomic) PFObject *latestNetwork;
 
 @end

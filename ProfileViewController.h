@@ -13,5 +13,11 @@
 
 - (IBAction)buttonSettings:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewProfilePic;
+@property (strong, nonatomic) IBOutlet UILabel *lblName;
+@property (strong, nonatomic) IBOutlet UILabel *lblPosition;
+@property (strong, nonatomic) IBOutlet UILabel *lblLocation;
+@property (strong, nonatomic) IBOutlet UILabel *lblInterests;
+@property (strong, nonatomic) IBOutlet UILabel *lblCompany;
 
 @end

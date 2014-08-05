@@ -14,6 +14,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+    // Hide Status Bar for App //
+    [UIApplication sharedApplication].statusBarHidden = YES;
+    
     // Pause Launch Image for a set time //
     [NSThread sleepForTimeInterval:0.1];
     

@@ -112,6 +112,19 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    PFUser *user = [self.joinedUsers objectAtIndex:indexPath.row];
+    self.selectedUser = user;
+    
+    NSLog(@"selected user 1 %@", self.selectedUser );
+            
+    [self performSegueWithIdentifier:@"showAttendee" sender:self];
+    
+};
+
+
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -156,6 +169,14 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showQRCodeScanner"]) {
         [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+        
+    } else if ([segue.identifier isEqualToString:@"showAttendee"]) {
+        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+        
+        // Transfer user to AttendeeDetailViewController //
+        AttendeeDetailViewController *viewController = (AttendeeDetailViewController *)segue.destinationViewController;
+        viewController.selectedUser = self.selectedUser;
+        
     }
 }
 

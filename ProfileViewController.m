@@ -7,7 +7,6 @@
 //
 
 #import "ProfileViewController.h"
-#import <Parse/Parse.h>
 
 @interface ProfileViewController ()
 
@@ -59,6 +58,15 @@
         [self performSegueWithIdentifier:@"showLogIn" sender:self];
     }
     
+}
+
+# pragma mark - Segue Methods
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showEdit"]) {
+        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+        
+    }
 }
 
 

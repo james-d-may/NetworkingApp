@@ -14,36 +14,30 @@
 
 @implementation AttendeeDetailViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewWillAppear:animated];
+    
+    NSLog(@"selected user 2 %@ , name: %@", self.selectedUser,[self.selectedUser valueForKey:@"Name"] );
+    
+    self.lblName.text = [self.selectedUser valueForKey:@"Name"];
+    self.lblPosition.text = [self.selectedUser valueForKey:@"Position"];
+    self.lblCompany.text = [self.selectedUser valueForKey:@"Company"];
+    self.lblLocation.text = [self.selectedUser valueForKey:@"Location"];
+    self.lblInterests.text = [self.selectedUser valueForKey:@"Interests"];
+    self.lblNav.title = [self.selectedUser valueForKey:@"Name"];
+    
+    PFFile *imageFile = [self.selectedUser valueForKey:@"ProfilePic"];
+    NSData *imageData = [imageFile getData];
+    UIImage *pic = [UIImage imageWithData:imageData];
+    
+    self.imageViewProfilePic.image = pic;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

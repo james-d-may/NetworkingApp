@@ -35,6 +35,7 @@
 		A50412CC19827BC00091F02B /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = A50412C119827BC00091F02B /* rscode.c */; };
 		A50412CD19827BC00091F02B /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = A50412C319827BC00091F02B /* split.c */; };
 		A50412D119827C0F0091F02B /* UIImage+QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A50412D019827C0F0091F02B /* UIImage+QRCodeGenerator.m */; };
+		A54A3CB61990EF0600790539 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A54A3CB51990EF0600790539 /* EditProfileViewController.m */; };
 		A5D6043819753A77009C6753 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6043719753A77009C6753 /* Foundation.framework */; };
 		A5D6043A19753A77009C6753 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6043919753A77009C6753 /* CoreGraphics.framework */; };
 		A5D6043C19753A77009C6753 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6043B19753A77009C6753 /* UIKit.framework */; };
@@ -109,6 +110,8 @@
 		A50412C419827BC00091F02B /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
 		A50412CF19827C0F0091F02B /* UIImage+QRCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+QRCodeGenerator.h"; sourceTree = "<group>"; };
 		A50412D019827C0F0091F02B /* UIImage+QRCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+QRCodeGenerator.m"; sourceTree = "<group>"; };
+		A54A3CB41990EF0600790539 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = SOURCE_ROOT; };
+		A54A3CB51990EF0600790539 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = SOURCE_ROOT; };
 		A5D6043419753A77009C6753 /* NetworkingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D6043719753A77009C6753 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A5D6043919753A77009C6753 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -246,6 +249,8 @@
 				A5041280197D834C0091F02B /* HomeTableViewController.h */,
 				A5041281197D834C0091F02B /* HomeTableViewController.m */,
 				A5D6044919753A77009C6753 /* Main.storyboard */,
+				A54A3CB41990EF0600790539 /* EditProfileViewController.h */,
+				A54A3CB51990EF0600790539 /* EditProfileViewController.m */,
 				A50412AE1981C7E30091F02B /* SignUpViewController.h */,
 				A50412AF1981C7E30091F02B /* SignUpViewController.m */,
 				A504129519815F720091F02B /* LogInViewController.h */,
@@ -388,6 +393,7 @@
 			files = (
 				A5041285197D83680091F02B /* MyNetworksTableViewController.m in Sources */,
 				A5D6044819753A77009C6753 /* AppDelegate.m in Sources */,
+				A54A3CB61990EF0600790539 /* EditProfileViewController.m in Sources */,
 				A5041282197D834C0091F02B /* HomeTableViewController.m in Sources */,
 				A50412C719827BC00091F02B /* mmask.c in Sources */,
 				A50412C619827BC00091F02B /* mask.c in Sources */,
@@ -530,6 +536,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -539,6 +546,7 @@
 				INFOPLIST_FILE = "NetworkingApp/NetworkingApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -548,6 +556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -557,6 +566,7 @@
 				INFOPLIST_FILE = "NetworkingApp/NetworkingApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
